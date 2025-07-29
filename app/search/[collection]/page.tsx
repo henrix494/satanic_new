@@ -10,7 +10,7 @@ export async function generateMetadata(props: {
   params: Promise<{ collection: string }>;
 }): Promise<Metadata> {
   const params = await props.params;
-  const collection = await getCollection(params.collection);
+  const collection = await getCollection(decodeURI(params.collection));
 
   if (!collection) return notFound();
 
