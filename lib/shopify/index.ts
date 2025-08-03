@@ -286,9 +286,9 @@ export async function getCart(): Promise<Cart | undefined> {
 export async function getCollection(
   handle: string
 ): Promise<Collection | undefined> {
-  // "use cache";
-  // cacheTag(TAGS.collections);
-  // cacheLife("days");
+  "use cache";
+  cacheTag(TAGS.collections);
+  cacheLife("days");
 
   const res = await shopifyFetch<ShopifyCollectionOperation>({
     query: getCollectionQuery,
@@ -333,9 +333,9 @@ export async function getCollectionProducts({
 }
 
 export async function getCollections(): Promise<Collection[]> {
-  // "use cache";
-  // cacheTag(TAGS.collections);
-  // cacheLife("days");
+  "use cache";
+  cacheTag(TAGS.collections);
+  cacheLife("days");
 
   const res = await shopifyFetch<ShopifyCollectionsOperation>({
     query: getCollectionsQuery,
@@ -364,9 +364,9 @@ export async function getCollections(): Promise<Collection[]> {
 }
 
 export async function getMenu(handle: string): Promise<Menu[]> {
-  // "use cache";
-  // cacheTag(TAGS.collections);
-  // cacheLife("days");
+  "use cache";
+  cacheTag(TAGS.collections);
+  cacheLife("days");
 
   const res = await shopifyFetch<ShopifyMenuOperation>({
     query: getMenuQuery,

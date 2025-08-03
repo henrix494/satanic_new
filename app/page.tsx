@@ -2,6 +2,7 @@ import { Carousel } from "components/carousel";
 import { ThreeItemGrid } from "components/grid/three-items";
 import Hero from "components/Hero/Hero";
 import Footer from "components/layout/footer";
+import Video from "components/Video";
 
 export const metadata = {
   description:
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Hero />
       <ThreeItemGrid />
       <Carousel />
+      <Video />
       <Footer />
     </>
   );
